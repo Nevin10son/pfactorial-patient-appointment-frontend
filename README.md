@@ -1,70 +1,43 @@
-# Getting Started with Create React App
+Clinic  Appointment Calender app
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A responsive and user-friendly React application for managing clinic appointments. The app features a custom-built calendar and an appointment management system for staff, making it easy to schedule, view, and update patient appointments.It consist of the following modules.
 
-## Available Scripts
+Login
 
-In the project directory, you can run:
+- The app uses hardcoded credentials for staff login.
+- If the user provides the correct email and password (`nevin@staff.login` / `123456`), they are navigated to the calendar view.
+- Incorrect credentials trigger an alert: "Invalid Credentials".
+- Session storage is used to preserve login state temporarily (non-persistent).
 
-### `npm start`
+Calendar 
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- A custom calendar built using a 7x5 CSS grid layout (not a third-party calendar).
+- Dates are dynamically populated using JavaScript's Date methods to correctly align the first day of the month and total days.
+- Each day shows up to 3 patient names with their appointment times (if scheduled).
+- Clicking on a day navigates to the appointment form for that specific date.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Appointment Management
 
-### `npm test`
+- Includes a form with:
+  - Patient name (`select` dropdown)
+  - Doctor name (`select` dropdown)
+  - Appointment time (`time` input)
+- Features:
+  - Add new appointments
+  - Edit existing appointments
+  - Delete appointments
+- Data is stored in localStorage, scoped by date for accurate day-wise tracking.
+- A maximum of 3 appointments per day are previewed in the calendar.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Dark Mode
 
-### `npm run build`
+- A toggle button switches between Light and Dark themes.
+- Improves usability across different lighting conditions.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+  Data Storage
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+  
+- Appointments are stored in localStorage, structured by date.
+- Login credentials are saved temporarily in sessionStorage.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+I have used version control for managing the project. All feature updates (e.g., login, calendar, appointment management) are tracked using branches and commits.
