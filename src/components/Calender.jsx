@@ -35,7 +35,7 @@ const Calender = () => {
 
   const handleDateClick = (date) => {
     const formatted = date.toISOString().split('T')[0];
-    navigate('/appointments/${formatted}');
+    navigate(`/appointments/${formatted}`);
   };
 
   return (
