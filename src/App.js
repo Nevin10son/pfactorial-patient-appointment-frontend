@@ -9,6 +9,7 @@ function App() {
       <BrowserRouter>
       <Routes>
         <Route path="/" element = {<LoginComponent/>}/>
+        <Route path="/usercalender" element = {<Calender/>}/>
         </Routes>
         </BrowserRouter>
       
