@@ -1,23 +1,21 @@
 import logo from './logo.svg';
 import './App.css';
+import LoginComponent from './components/LoginComponent';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import Calender from './components/Calender'
+import AppointmentBook from './components/AppointmentBook';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <BrowserRouter>
+      <Routes>
+        <Route path="/" element = {<LoginComponent/>}/>
+        <Route path="/usercalender" element = {<Calender/>}/>
+        <Route path="/appointments/:date" element = {<AppointmentBook/>}/>
+        </Routes>
+        </BrowserRouter>
+      
     </div>
   );
 }

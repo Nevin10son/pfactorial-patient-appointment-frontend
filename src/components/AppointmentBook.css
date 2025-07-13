@@ -1,0 +1,147 @@
+
+.appt-container {
+  max-width: 520px;
+  margin: 2rem auto;
+  padding: 1.5rem;
+  font-family: sans-serif;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  color: #333;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  transition: all 0.3s ease;
+}
+
+
+.dark-mode {
+  background-color: #1e1e1e;
+  color: #f0f0f0;
+}
+
+.dark-mode input,
+.dark-mode select,
+.dark-mode button {
+  background-color: #2b2b2b;
+  color: #f0f0f0;
+  border: 1px solid #555;
+}
+
+.dark-mode .appt-item {
+  background-color: #2c2c2c;
+}
+
+.dark-mode .appt-dark-toggle {
+  background-color: #e4e4e4;
+  color: #111;
+}
+
+
+.appt-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+
+.appt-dark-toggle {
+  padding: 0.4rem 0.8rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  background-color: #444;
+  color: white;
+}
+
+
+.appt-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.appt-form select,
+.appt-form input,
+.appt-form button {
+  padding: 0.6rem;
+  font-size: 1rem;
+  border: 1px solid #aaa;
+  border-radius: 5px;
+}
+
+.appt-submit {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  cursor: pointer;
+  width: 50%;
+}
+
+.appt-submit:hover {
+  background-color: #0056b3;
+}
+
+
+.appt-empty {
+  text-align: center;
+  color: #666;
+  font-style: italic;
+}
+
+
+.appt-list {
+  list-style: none;
+  padding: 0;
+  margin-top: 1rem;
+}
+
+.appt-item {
+  background-color: #eaeaea;
+  padding: 0.75rem;
+  border-radius: 6px;
+  margin-bottom: 1rem;
+}
+
+.appt-info {
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.appt-actions button {
+  margin-right: 0.5rem;
+  padding: 0.3rem 0.6rem;
+  border: none;
+  border-radius: 4px;
+  background-color: #6c757d;
+  color: white;
+  cursor: pointer;
+}
+
+.appt-actions button:hover {
+  background-color: #495057;
+}
+
+
+@media screen and (max-width: 500px) {
+  .appt-container {
+    padding: 1rem;
+    margin: 1rem;
+  }
+
+  .appt-form select,
+  .appt-form input,
+  .appt-form button {
+    font-size: 0.95rem;
+    padding: 0.5rem;
+  }
+
+  .appt-actions button {
+    font-size: 0.85rem;
+    padding: 0.3rem 0.6rem;
+  }
+
+  .appt-dark-toggle {
+    font-size: 0.85rem;
+    padding: 0.3rem 0.6rem;
+  }
+}
